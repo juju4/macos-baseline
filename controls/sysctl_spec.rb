@@ -11,4 +11,3 @@ control 'sysctl-01' do
     its(:value) { should eq 0 }
   end
 end
-

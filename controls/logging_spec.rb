@@ -3,7 +3,7 @@
 control 'logging-01' do
   impact 1.0
   title 'Ensure system logs are available'
-  desc "Logging is critical to system management"
+  desc 'Logging is critical to system management'
   describe file('/var/log/authd.log') do
     it { should be_file }
     it { should be_owned_by 'root' }
@@ -18,4 +18,3 @@ control 'logging-01' do
     its('users') { should cmp 'root' }
   end
 end
-
