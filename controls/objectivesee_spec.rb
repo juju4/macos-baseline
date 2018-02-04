@@ -11,7 +11,7 @@ objectivesee_files = attribute(
     '/Library/Objective-See/BlockBlock',
     '/Library/RansomWhere/RansomWhere',
     '/Applications/OverSight.app/Contents/Library/LoginItems/OverSightXPC.xpc',
-    '/Applications/LuLu.app/Contents/MacOS/LuLu',
+    '/Applications/LuLu.app/Contents/MacOS/LuLu'
   ],
   description: 'list of objective-see files to control'
 )

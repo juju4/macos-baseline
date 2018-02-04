@@ -10,7 +10,7 @@ control 'audit-01' do
     its('mode') { should cmp '0400' }
     its('size') { should > 0 }
     # requires root access
-    its('content') { should match /flags:lo,aa,ex,ad,nt/ }
+    its('content') { should cmp 'flags:lo,aa,ex,ad,nt' }
   end
   describe file('/var/audit') do
     it { should be_directory }
