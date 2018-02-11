@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-control 'firewall-01' do
+control 'appfirewall-01' do
   impact 1.0
   title 'Ensure application firewall is configured'
   desc 'Host application firewall is part of defense in depth - root required'
