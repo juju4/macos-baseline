@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
 control 'santa-01' do
   impact 1.0
