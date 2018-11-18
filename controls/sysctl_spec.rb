@@ -15,7 +15,7 @@ end
 control 'sysctl-02' do
   impact 1.0
   title 'Encrypted Swap'
-  desc "Check that systctl returns encrypted swap state"
+  desc 'Check that systctl returns encrypted swap state'
   describe kernel_parameter('vm.swapusage') do
     its(:value) { should match(/encrypted/) }
   end

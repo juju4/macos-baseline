@@ -8,7 +8,7 @@ control 'audit-01' do
     it { should be_file }
     it { should be_owned_by 'root' }
     its('mode') { should cmp '0400' }
-    its('size') { should > 0 }
+    its('size') { should be.positive? }
     # requires root access
     its('content') { should cmp 'flags:lo,aa,ex,ad,nt' }
   end

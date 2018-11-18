@@ -24,7 +24,7 @@ control 'objectivesee-01' do
     describe file(file.to_s) do
       it { should be_file }
       it { should be_owned_by 'root' }
-      its('size') { should > 0 }
+      its('size') { should be.positive? }
     end
   end
   only_if { objectivesee_check == true }

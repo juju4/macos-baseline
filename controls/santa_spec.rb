@@ -7,7 +7,7 @@ control 'santa-01' do
   describe file('/var/db/santa/config.plist') do
     it { should be_file }
     it { should be_owned_by 'root' }
-    its('size') { should > 0 }
+    its('size') { should be.positive? }
   end
   describe file('/var/db/santa/rules.db') do
     it { should be_file }

@@ -8,17 +8,17 @@ control 'logging-01' do
   # describe file('/var/log/authd.log') do
   #  it { should be_file }
   #  it { should be_owned_by 'root' }
-  #  its('size') { should > 0 }
+  #  its('size') { should be.positive? }
   # end
   describe file('/var/log/system.log') do
     it { should be_file }
     it { should be_owned_by 'root' }
-    its('size') { should > 0 }
+    its('size') { should be.positive? }
   end
   describe file('/var/log/install.log') do
     it { should be_file }
     it { should be_owned_by 'root' }
-    its('size') { should > 0 }
+    its('size') { should be.positive? }
   end
   describe processes('syslogd') do
     its('users') { should cmp 'root' }

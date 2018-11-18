@@ -7,7 +7,7 @@ control 'osquery-01' do
   describe file('/var/osquery/osquery.conf') do
     it { should be_file }
     it { should be_owned_by 'root' }
-    its('size') { should > 0 }
+    its('size') { should be.positive? }
   end
   describe file('/var/osquery/osquery.db') do
     it { should be_directory }
