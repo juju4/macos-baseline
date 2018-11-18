@@ -14,7 +14,7 @@ control 'santa-01' do
     it { should be_owned_by 'root' }
     it { should be_readable.by('owner') }
     # it { should not be_readable.by('other') }
-    its('size') { should > 0 }
+    its('size') { should be.positive? }
   end
   describe processes('santad') do
     its('users') { should cmp 'root' }
