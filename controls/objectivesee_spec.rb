@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-objectivesee_check = attribute(
+objectivesee_check = input(
   'objectivesee_check',
-  default: true,
+  value: true,
   description: 'Control if Objective-tools are present'
 )
-objectivesee_files = attribute(
+objectivesee_files = input(
   'objectivesee_files',
-  default: [
+  value: [
     '/Library/Objective-See/BlockBlock',
     '/Library/RansomWhere/RansomWhere',
     '/Applications/OverSight.app/Contents/Library/LoginItems/OverSightXPC.xpc',
-    '/Applications/LuLu.app/Contents/MacOS/LuLu'
+    '/Applications/LuLu.app/Contents/MacOS/LuLu',
   ],
   description: 'list of objective-see files to control'
 )
